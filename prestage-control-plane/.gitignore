@@ -1,0 +1,37 @@
+# .gitignore
+
+# Environments
+.env
+.venv/
+venv/
+node_modules/
+
+# Dependencies
+*.lock
+requirements.txt
+
+# Caches
+.cache/
+__pycache__/
+
+# Build artifacts
+dist/
+build/
+
+# Data/Media
+*.log
+*.tmp
+*.png
+*.jpg
+*.gif
+
+# Databases
+*.db
+*.sqlite
+
+# Editor/OS
+.DS_Store
+Thumbs.db
+
+# OpenCode artifacts
+.opencode/

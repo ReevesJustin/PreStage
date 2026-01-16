@@ -1,0 +1,27 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+
+  // Workspace-level defaults (you start OpenCode here).
+  // The prestage-control-plane lives under: prestage-control-plane/
+  "model": "xai/grok-1-fast",
+  "autoupdate": false,
+  "snapshot": false,
+
+  // Ensure OpenCode loads the control-plane’s authoritative rules and docs
+  // even when started from the workspace root.
+  "instructions": [
+    "AGENTS.md",
+    "prestage-control-plane/AGENTS.md",
+
+    "prestage-control-plane/docs/WORKFLOW.md",
+    "prestage-control-plane/docs/CONTEXT.md",
+    "prestage-control-plane/docs/STATUS.md",
+    "prestage-control-plane/docs/DECISIONS.md",
+    "prestage-control-plane/docs/DECISION_CHECKLIST.md",
+    "prestage-control-plane/docs/SESSION_TEMPLATE.md",
+
+    "prestage-control-plane/templates/intake_questionnaire.md",
+    "prestage-control-plane/templates/readiness_gate.md",
+    "prestage-control-plane/templates/session_brief.md"
+  ]
+}
