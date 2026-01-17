@@ -1,69 +1,143 @@
-# Readiness Gate
+# Readiness Gate (Immutable Template)
 
-This gate certifies that canonical documentation is complete
-and the project or workstream is ready for downstream execution.
-This project itself performs no execution.
+## Purpose
 
----
+This document defines the **readiness evaluation criteria** that must be satisfied
+before a GO decision may be declared.
 
-## Intake Reference
+It exists to ensure that:
+- Canonical documents are complete and coherent
+- Scope, constraints, and authority are explicit
+- Execution will not occur on ambiguous or unstable foundations
 
-Intake Type: [New Project | New Workstream]
-
-Project:
-Workstream: [If applicable]
-
----
-
-## Canonical Application Verification (Mandatory)
-
-Canonical Docs Updated: [Yes | No]
-
-Evidence (file + section headers):
-- CONTEXT.md §
-- STATUS.md §
-- DECISIONS.md entry: [If applicable]
-
-If Canonical Docs Updated = No → **NO-GO (do not proceed further)**
+This file is an **immutable prestage template**.
 
 ---
 
-## Readiness Checklist
+## Immutability Contract
 
-Objective explicitly defined: [Yes | No]
+- This file resides in the **prestage control plane**
+- It contains **no project-specific evaluations or decisions**
+- It is **never completed or edited in place**
+- It is **copied verbatim** into a destination project directory at GO
 
-Out-of-Scope explicitly bounded: [Yes | No]
+At GO, this template is instantiated as a writable artifact in:
 
-Acceptance Criteria measurable and concrete: [Yes | No]
+/projects/<ProjectName>/STATUS/readiness_gate.md
 
-Allowed Context Surface narrowly defined: [Yes | No]
 
-Tooling posture confirmed filesystem-only: [Yes | No]
+All evaluations, checkmarks, and notes occur **only in the destination project**.
 
----
-
-## GO / NO-GO Decision
-
-Decision: [GO | NO-GO]
-
-Rule:
-- GO is permitted ONLY if all checklist items are Yes
-  AND Canonical Docs Updated = Yes.
-- Any No results in NO-GO.
+Prestage itself remains unchanged.
 
 ---
 
-## NO-GO Remediation Guidance (Max 5)
+## Usage Rules
 
-1. [Missing or vague objective]
-2. [Unbounded scope or exclusions]
-3. [Incomplete acceptance criteria]
-4. [Over-broad context surface]
-5. [Canonical docs not updated]
+- Pre-GO: This document defines **what will be evaluated**
+- GO event: A fresh copy is instantiated into the project
+- Post-GO: The instantiated copy is completed to record readiness status
+
+This document **does not authorize execution** by itself.
 
 ---
 
-## Gate Declaration
+## Gate Preconditions
 
-- This decision does not authorize execution inside this project.
-- A GO decision authorizes creation of a Session Brief only.
+All of the following must exist **in the destination project** before readiness
+may be evaluated:
+
+- CONTEXT.md
+- STATUS.md
+- DECISIONS.md
+- SESSION_BRIEF.md
+- Instantiated intake questionnaire
+
+If any are missing, readiness evaluation is invalid.
+
+---
+
+## Readiness Criteria
+
+### 1. Context Integrity
+
+- [ ] CONTEXT.md exists
+- [ ] Project purpose is explicitly stated
+- [ ] Scope boundaries are defined
+- [ ] Assumptions are documented
+- [ ] Context does not contradict itself
+
+---
+
+### 2. Status Clarity
+
+- [ ] STATUS.md exists
+- [ ] Current phase is declared
+- [ ] Known blockers are listed (or explicitly none)
+- [ ] Next decision point is identified
+
+---
+
+### 3. Decision Hygiene
+
+- [ ] DECISIONS.md exists
+- [ ] All irreversible or binding decisions are recorded
+- [ ] Decision authority is clear
+- [ ] No implicit or undocumented decisions exist
+
+---
+
+### 4. Intake Application
+
+- [ ] Intake questionnaire has been completed in-project
+- [ ] Intake content has been applied to canonical docs
+- [ ] No unresolved intake conflicts remain
+
+---
+
+### 5. Session Definition
+
+- [ ] SESSION_BRIEF.md exists
+- [ ] Session purpose is narrow and explicit
+- [ ] Deliverables are defined
+- [ ] Success conditions are stated
+- [ ] Session scope aligns with CONTEXT
+
+---
+
+### 6. Constraint Alignment
+
+- [ ] Constraints are explicitly restated
+- [ ] Allowed context surface is defined
+- [ ] Tooling posture is documented
+- [ ] No forbidden capabilities are implied
+
+---
+
+## Gate Outcome
+
+One of the following outcomes must be recorded **in the instantiated copy**:
+
+- **PASS** — All criteria satisfied; GO may be declared
+- **HOLD** — Gaps exist; remediation required before GO
+- **FAIL** — Preconditions unmet or contradictions detected
+
+Outcome rationale must be documented.
+
+---
+
+## Authority Note
+
+- Passing this gate **permits GO**
+- Passing this gate does **not** mandate execution
+- Execution authority is governed elsewhere
+
+---
+
+## Change Policy
+
+- This template may only be modified via **prestage control-plane governance**
+- Project-specific evaluations belong exclusively in instantiated copies
+- Historical gate records must never be back-propagated into prestage
+
+Prestage remains immutable by design.
