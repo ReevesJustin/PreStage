@@ -23,7 +23,7 @@ This file is an **immutable prestage template**.
 
 At GO, this template is instantiated as a writable artifact in:
 
-/projects/<ProjectName>/STATUS/readiness_gate.md
+/home/justin/projects/<project_name>/STATUS/readiness_gate.md
 
 
 All evaluations, checkmarks, and notes occur **only in the destination project**.

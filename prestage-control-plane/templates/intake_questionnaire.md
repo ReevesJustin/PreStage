@@ -8,7 +8,7 @@ It is a **prestage intake template** used to surface scope, constraints, and int
 *prior to GO*. It is **not authoritative** and **does not permit readiness gating**
 until its contents are applied to canonical project documents.
 
-This file is **immutable** within the prestage-control-plane.
+This file is **immutable** within the prestage-control-plane and is instantiated only at GO.
 
 ---
 
@@ -20,7 +20,7 @@ This file is **immutable** within the prestage-control-plane.
 - It is **copied verbatim** into a destination project directory at GO
 
 At GO, this template is instantiated as a writable artifact in:
-/projects/<ProjectName>/CONTEXT/intake_questionnaire.md
+/home/justin/projects/<project_name>/CONTEXT/intake_questionnaire.md
 
 
 All answers, edits, and annotations occur **only in the destination project**.

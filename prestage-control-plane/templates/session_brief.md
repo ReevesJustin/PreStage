@@ -22,7 +22,7 @@ This file is an **immutable prestage template**.
 
 At GO, this template is instantiated as a writable artifact in:
 
-/projects/<ProjectName>/SESSION/session_brief.md
+/home/justin/projects/<project_name>/SESSION/session_brief.md
 
 
 All session-specific content belongs **only** in the destination project.
