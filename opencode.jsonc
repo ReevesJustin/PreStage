@@ -11,7 +11,7 @@
   // even when started from the workspace root.
   "instructions": [
     "AGENTS.md",
-    "prestage-control-plane/AGENTS.md",
+    "prestage-control-plane/agents/AGENT_CHARTER.md",
 
     "prestage-control-plane/docs/WORKFLOW.md",
     "prestage-control-plane/docs/CONTEXT.md",
