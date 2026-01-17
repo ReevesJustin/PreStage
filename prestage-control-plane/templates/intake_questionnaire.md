@@ -1,4 +1,4 @@
-# Intake Questionnaire (Immutable Template)
+# Intake Questionnaire (Project Instance)
 
 ## Purpose
 
@@ -8,24 +8,26 @@ It is a **prestage intake template** used to surface scope, constraints, and int
 *prior to GO*. It is **not authoritative** and **does not permit readiness gating**
 until its contents are applied to canonical project documents.
 
-This file is **immutable** within the prestage-control-plane and is instantiated only at GO.
+## Provenance
+
+- Source template: prestage-control-plane/templates/intake_questionnaire.md
+- Destination project root: /home/justin/projects/<project_name>
+- Instantiated location: /home/justin/projects/<project_name>/CONTEXT/intake_questionnaire.md
+- Status after instantiation: EDITABLE PROJECT STATE
 
 ---
 
-## Immutability Contract
+## Template vs Project Instance
 
-- This file resides in the **prestage control plane**
-- It contains **no project-specific state**
-- It is **never completed or edited in place**
-- It is **copied verbatim** into a destination project directory at GO
+### Template (in prestage-control-plane)
+- Immutable within the repository
+- Contains no project-specific data
+- Never edited in place
 
-At GO, this template is instantiated as a writable artifact in:
-/home/justin/projects/<project_name>/CONTEXT/intake_questionnaire.md
-
-
-All answers, edits, and annotations occur **only in the destination project**.
-
-Prestage itself remains unchanged.
+### Instantiated Copy (in destination project)
+- Editable project artifact
+- May be filled out and updated
+- Used to apply updates to canonical docs
 
 ---
 
@@ -134,9 +136,8 @@ Filesystem-only. No web access. No MCP. No execution.
 
 ## Change Policy
 
-- This template may only be updated via **prestage control-plane governance**
+- The prestage template may only be updated via **prestage control-plane governance**
 - Project-specific edits belong exclusively in instantiated copies
 - Drift between prestage templates and project artifacts is expected and allowed
 
 Prestage remains immutable by design.
-

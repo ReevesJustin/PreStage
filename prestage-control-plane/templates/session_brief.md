@@ -1,4 +1,4 @@
-# Session Brief (Immutable Template)
+# Session Brief (Project Instance)
 
 ## Purpose
 
@@ -9,25 +9,26 @@ It exists to:
 - Bind execution to explicit objectives and constraints
 - Prevent scope creep and implicit task expansion
 
-This file is an **immutable prestage template**.
+## Provenance
+
+- Source template: prestage-control-plane/templates/session_brief.md
+- Destination project root: /home/justin/projects/<project_name>
+- Instantiated location: /home/justin/projects/<project_name>/SESSION/session_brief.md
+- Status after instantiation: EDITABLE PROJECT STATE
 
 ---
 
-## Immutability Contract
+## Template vs Project Instance
 
-- This file resides in the **prestage control plane**
-- It contains **no project-specific session state**
-- It is **never completed or edited in place**
-- It is **copied verbatim** into a destination project directory at GO
+### Template (in prestage-control-plane)
+- Immutable within the repository
+- Contains no project-specific data
+- Never edited in place
 
-At GO, this template is instantiated as a writable artifact in:
-
-/home/justin/projects/<project_name>/SESSION/session_brief.md
-
-
-All session-specific content belongs **only** in the destination project.
-
-Prestage itself remains unchanged.
+### Instantiated Copy (in destination project)
+- Editable project artifact
+- May be filled out and updated
+- Used to apply updates to canonical docs
 
 ---
 
@@ -123,7 +124,7 @@ Abort conditions:
 
 ## Change Policy
 
-- This template may only be updated via **prestage control-plane governance**
+- The prestage template may only be updated via **prestage control-plane governance**
 - Session-specific edits belong exclusively in instantiated copies
 - Historical session briefs must never be back-propagated into prestage
 

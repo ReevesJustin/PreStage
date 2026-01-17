@@ -1,4 +1,4 @@
-# Readiness Gate (Immutable Template)
+# Readiness Gate (Project Instance)
 
 ## Purpose
 
@@ -10,25 +10,26 @@ It exists to ensure that:
 - Scope, constraints, and authority are explicit
 - Execution will not occur on ambiguous or unstable foundations
 
-This file is an **immutable prestage template**.
+## Provenance
+
+- Source template: prestage-control-plane/templates/readiness_gate.md
+- Destination project root: /home/justin/projects/<project_name>
+- Instantiated location: /home/justin/projects/<project_name>/STATUS/readiness_gate.md
+- Status after instantiation: EDITABLE PROJECT STATE
 
 ---
 
-## Immutability Contract
+## Template vs Project Instance
 
-- This file resides in the **prestage control plane**
-- It contains **no project-specific evaluations or decisions**
-- It is **never completed or edited in place**
-- It is **copied verbatim** into a destination project directory at GO
+### Template (in prestage-control-plane)
+- Immutable within the repository
+- Contains no project-specific data
+- Never edited in place
 
-At GO, this template is instantiated as a writable artifact in:
-
-/home/justin/projects/<project_name>/STATUS/readiness_gate.md
-
-
-All evaluations, checkmarks, and notes occur **only in the destination project**.
-
-Prestage itself remains unchanged.
+### Instantiated Copy (in destination project)
+- Editable project artifact
+- May be filled out and updated
+- Used to apply updates to canonical docs
 
 ---
 
@@ -136,7 +137,7 @@ Outcome rationale must be documented.
 
 ## Change Policy
 
-- This template may only be modified via **prestage control-plane governance**
+- The prestage template may only be modified via **prestage control-plane governance**
 - Project-specific evaluations belong exclusively in instantiated copies
 - Historical gate records must never be back-propagated into prestage
 
