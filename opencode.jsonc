@@ -7,8 +7,8 @@
   "autoupdate": false,
   "snapshot": false,
 
-  // Ensure OpenCode loads the control-plane’s authoritative rules and docs
-  // even when started from the workspace root.
+  // Ensure OpenCode loads the workspace startup rules AND the control-plane
+  // immutability charter + SOP/templates when started from the workspace root.
   "instructions": [
     "AGENTS.md",
     "prestage-control-plane/agents/AGENT_CHARTER.md",
