@@ -10,4 +10,4 @@ This project pre-stages and intakes projects/workstreams. It enforces strict rea
 
 ## Human Overview
 For a human-readable explanation of purpose, design, and usage, see:  
-**[Prestage Control Plane — Human Overview](docs/HUMAN_OVERVIEW.md)**
+**[Prestage Control Plane — Human Overview](prestage-control-plane/docs/HUMAN_OVERVIEW.md)**
